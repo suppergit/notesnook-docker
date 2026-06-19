@@ -46,10 +46,10 @@ jobs:
         file: ./app/Dockerfile
         push: true
         build-args: 
-      NN_API_HOST=${{ secrets.NN_API_HOST }}
-      NN_AUTH_HOST:=${{ secrets.NN_AUTH_HOST }}
-      NN_SSE_HOST=${{ secrets.NN_SSE_HOST }}
-      NN_MONOGRAPH_HOST=${{ secrets.NN_MONOGRAPH_HOST }}
+      NN_API_HOST: ${{ secrets.NN_API_HOST }}
+      NN_AUTH_HOST: ${{ secrets.NN_AUTH_HOST }}
+      NN_SSE_HOST: ${{ secrets.NN_SSE_HOST }}
+      NN_MONOGRAPH_HOST: ${{ secrets.NN_MONOGRAPH_HOST }}
         tags: ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}
         # 开启 GitHub 缓存，极大加快后续构建速度
