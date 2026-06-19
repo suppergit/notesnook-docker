@@ -42,7 +42,7 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v6  # 2026年最新 V6 版本
       with:
-        context: .
+        context: ./app
         file: ./app/Dockerfile
         push: true
         tags: ${{ steps.meta.outputs.tags }}
