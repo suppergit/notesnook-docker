@@ -33,7 +33,7 @@ jobs:
       uses: docker/metadata-action@v5
       with:
         # 替换为：你的DockerHub用户名/你的镜像仓库名
-        images: ${{ secrets.DOCKER_USERNAME }}/my-app 
+        images: ${{ secrets.DOCKER_USERNAME }}/notesnook-web 
         tags: |
           type=raw,value=latest
           type=sha,format=short
