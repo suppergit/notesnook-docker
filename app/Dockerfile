@@ -1,5 +1,5 @@
 # Build Stage
-FROM node:20 AS builder
+FROM node:22 AS builder
 
 WORKDIR /app
 
@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends git \
     && rm -rf /var/lib/apt/lists/*
 
 # Clone Notesnook monorepo
-RUN git clone --depth=1 https://github.com/beardedtek/notesnook.git .
+RUN git clone --branch v3.3.23 --single-branch https://github.com/streetwriters/notesnook.git .
 
 # Install dependencies (monorepo root)
 RUN npm ci
